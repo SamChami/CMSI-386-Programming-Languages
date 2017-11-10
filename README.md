@@ -1,6 +1,7 @@
-# lmu-cmsi-386
+# LMU CMSI 386: Programming Languages
+<p>
+Code by Sam Chami and John Scott
+</p>
 
-Homework Group: Sam Chami and John Scott
-
-Homework 1: Javascript
+Homework 1: Javascript<br>
 Homework 2: Python
