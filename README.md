@@ -3,7 +3,7 @@
 A comparative study of the rationale, concepts, design, and features of several major programming languages. Topics include the role of bindings, control flow, types, subroutines, modules, objects, and concurrency.
 </p>
 
-Homework 1: Javascript<br>
+Homework 1: JavaScript<br>
 Homework 2: Pythor<br>
 
 <p>
