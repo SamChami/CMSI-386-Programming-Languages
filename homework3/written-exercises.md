@@ -1,4 +1,5 @@
 # Homework 1-6 Answers
+### Collaborators: Sam Chami, John Scott, Benjamin Smith
 
 ### 1. Given the C++ declaration:
 ```C++
@@ -21,7 +22,10 @@ struct {
 [9][8]  
 [9][9]  
 (The pointer for [0][10] points to the same memory address as the pointer for [1][0]. However, [0][10] is not within the size of the array.)  
-When y is incremented by 1, 8 in hexadecimal is added to the memory address to allocate memory for a char's size, which is 8 bits. When x is incremented by 1, the memory is still allocated for the 10 y's that belong to the previous x value. For that reason, the memory address when x is incremented by 1 increases by 50 in hexadecimal (8 * a in hex is 50. a(hex) = 10(dec)).
+When y is incremented by 1, 8 in hexadecimal is added to the memory address to allocate memory for a char's size, which is 8 bits. When x is incremented by 1, the memory is still allocated for the 10 y's that belong to the previous x value. For that reason, the memory address when x is incremented by 1 increases by 50 in hexadecimal (8 * a in hex is 50. a(hex) = 10(dec)).  
+In one iteration on the computer,   
+**A[0][0] is addressed at 0x5604fe8101c0** and **A[3][7] is addressed at 0x5604fe8102e8**.   
+The latter storage location has 108 more hexadecimal digits than its former (hex: 50 * 2 + 8 * 7 = 108).
 
 ---
 ### 2. Explain the meaning of the following C++ declarations:
@@ -43,7 +47,7 @@ double (*f(double (*)(double, double[]), double)) (double, ...);
 ```
 ### Describe rigorously, in English, the type of f.
 
->ANSWER Here
+>**f** is a function **passing** a pointer to a function **( passing** a double and an array of doubles **returning** a double **)** and a double **returning** a pointer to a function **( passing** an indefinite number of doubles as arguments **returning** a double **)**.
 
 ---
 ### 4. What happens when we “redefine” a field in a C++ subclass? For example, suppose we have:
@@ -62,7 +66,7 @@ public:
 ```
 ### Does the representation of a Derived object contain one b field or two? If two, are both accessible, or only one? Under what circumstances? Tell the story of how things are.
 
->ANSWER Here
+> The representation of a Derived object contains two b fields and both are accessible. It is possible to access base class fields (std::string b) using the scope resolution operator (::) even if they are made hidden by a derived class field (int b). For example if we created a Derived object d, we could access its b field by just saying d.b or we could access its inherited Base b field by saying d.Base::b. This is because when a C++ subclass defines a field that already has a defined field with the same name in the base class it simply uses the one it defines as default and hides the base one.
 
 ---
 ### 5. What does the following C++ program output?
@@ -93,9 +97,9 @@ Since f() is called within g(), it would look for variables first locally and th
 ### 6. Suppose you were asked to write a function to scramble (shuffle) a given array, in a mutable fashion. Give the function signature for a shuffle function for (a) a raw array, and (b) a std::array.
 a.
 ```C++
-
+char[] shuffle(char[] inputs, int length)
+)
 ```
-b.
 ```C++
-
+std::array shuffle(const std::array<char, size>)
 ```
