@@ -6,3 +6,4 @@ A comparative study of the rationale, concepts, design, and features of several 
 Homework 1: JavaScript  | Sam Chami, John Scott  
 Homework 2: Python      | Sam Chami, John Scott  
 Homework 3: C++         | Sam Chami, John Scott, Ben Smith  
+Homework 4: Elm 		| Sam Chami, John Scott, Ben Smith
